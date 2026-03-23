@@ -59,7 +59,7 @@ def stream_audio():
         return Response(
             generate_chunks(process), 
             mimetype='audio/mpeg',
-            headers={"Content-Disposition": "attachment; filename='audio.mp3'"}
+            headers={"Content-Type": "audio/mpeg"}
         )
 
     except Exception as e:
